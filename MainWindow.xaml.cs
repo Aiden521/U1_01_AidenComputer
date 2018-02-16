@@ -1,4 +1,10 @@
-﻿using System;
+/*
+ Aiden Jolley Ruhn
+ Febuary 16, 2018
+ U1_03_AidenComputer
+ Aiden Computer - Displays all the neccasary and compatible parts that will work together to create a PC
+*/
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
