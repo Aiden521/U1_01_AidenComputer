@@ -20,7 +20,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Diagnostics;
 
-namespace U1_03_nameComputer
+namespace U1_03_AidenComputer
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
