@@ -18,8 +18,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Diagnostics;
 
-namespace U1_01_AidenComputer
+namespace U1_03_nameComputer
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -27,11 +28,11 @@ namespace U1_01_AidenComputer
     public partial class MainWindow : Window
     {
         int imageCount = 0;
-
+        
         public MainWindow()
         {
-
-
+         
+       
             InitializeComponent();
         }
 
@@ -88,7 +89,7 @@ namespace U1_01_AidenComputer
                 ForwardPart.Visibility = Visibility.Hidden;
                 PartName.Content = ("ASRock - X79 Extreme9 ATX LGA2011 Motherboard");
             }
-
+            
         }
 
         private void BackPart_Click(object sender, RoutedEventArgs e)
@@ -104,9 +105,8 @@ namespace U1_01_AidenComputer
                 PartName.Content = ("Intel - Xeon E5-2650 V2 2.6GHz 8-Core Processor");
 
             }
-            else if (imageCount == 1)
-            {
-
+            else if (imageCount == 1) {
+                
                 BitmapImage bi = new BitmapImage(new Uri("http://ecx.images-amazon.com/images/I/41L1psoCFDL.jpg")); // Case image
                 PartImage.Source = bi;
                 PartName.Content = ("Raidmax - Vampire ATX Full Tower Case");
@@ -122,7 +122,7 @@ namespace U1_01_AidenComputer
                 BitmapImage bi = new BitmapImage(new Uri("https://cdn.pcpartpicker.com/static/forever/images/product/1d57cf53a1289e4dfff1aed9b1cc272a.1600.jpg")); // Power Supply Image
                 PartImage.Source = bi;
                 PartName.Content = ("Corsair - 1600W 80+ Titanium Certified Fully-Modular ATX Power Supply");
-
+                
             }
             else if (imageCount == 4)
             {
@@ -143,6 +143,53 @@ namespace U1_01_AidenComputer
                 ForwardPart.Visibility = Visibility.Hidden;
                 PartName.Content = ("ASRock - X79 Extreme9 ATX LGA2011 Motherboard");
             }
+        }
+
+        private void InfBtn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Hyperlink_Click_1(object sender, RoutedEventArgs e)
+        {
+            if (imageCount == 0)
+            {
+                Process.Start("https://ark.intel.com/products/75269/Intel-Xeon-Processor-E5-2650-v2-20M-Cache-2_60-GHz");
+            }
+            else if (imageCount == 1)
+            {
+                Process.Start("https://www.newegg.com/Product/Product.aspx?Item=N82E16811156288");
+            }
+            else if (imageCount == 2)
+            {
+                Process.Start("http://www.pny.com/nvidia-quadro-gp100");
+            }
+            else if (imageCount == 3)
+            {
+                Process.Start("http://www.corsair.com/en-us/ax1600i-digital-atx-power-supply-1600-watt-fully-modular-psu-na");
+            }
+            else if (imageCount == 4)
+            {
+                Process.Start("https://www.newegg.com/Product/Product.aspx?Item=N82E16820231525");
+            }
+            else if (imageCount == 5)
+            {
+                Process.Start("https://www.amazon.com/Seagate-IronWolf-3-5-Inch-Internal-ST12000VN0007/dp/B075XPBD5B");
+            }
+            else if (imageCount == 6)
+            {
+                Process.Start("http://www.asrock.com/mb/intel/X79%20Extreme9/index.asp?cat=CPU");
+            }
+            else
+            {
+                MessageBox.Show("How did you do that?");
+            }
+
+        }
+
+        private void Hyperlink_RequestNavigate(object sender, RequestNavigateEventArgs e)
+        {
+
         }
     }
 }
