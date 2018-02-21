@@ -1,29 +1,66 @@
-﻿<Window x:Class="U1_01_AidenComputer.MainWindow"
+<Window x:Class="U1_03_AidenComputer.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:U1_01_AidenComputer"
+        xmlns:local="clr-namespace:U1_03_AidenComputer"
         mc:Ignorable="d"
-       Title="Aiden's PC" Height="600" Width="800" Background="Gray">
+        Title="Aiden's PC" Height="600" Width="800" Background="Gray">
     <Grid>
         <StackPanel Orientation="Vertical">
-            <Label x:Name="PartName"  HorizontalAlignment="Center" Height="40" Width="600" FontSize="14" Background="White" FontStretch="Medium" FontWeight="Black" Content="Intel - Xeon E5-2650 V2 2.6GHz 8-Core Processor"/>
-            <Separator Height="20" Visibility='Hidden' />
-            <Image x:Name="PartImage" Height="300" Width="500" Source="http://ecx.images-amazon.com/images/I/51kDgQgexzL.jpg"/>
-            <StackPanel Orientation="Horizontal">
-                <Separator Width="280" Visibility="Hidden"/>
-                <Button  Content="Backward" x:Name="BackPart" Height="64" Width="80"
-                         Visibility="Hidden"
+              <Label 
+                  x:Name="PartName"  
+                  HorizontalAlignment="Center" 
+                  Height="40" 
+                  Width="600" 
+                  FontSize="14" 
+                  Background="White" 
+                  FontStretch="Medium" 
+                  FontWeight="Black"
+                  Content="Intel - Xeon E5-2650 V2 2.6GHz 8-Core Processor"/>
+               <Separator Height="20" Visibility='Hidden' />
+                 <TextBlock HorizontalAlignment="Center">
+                   <Image 
+                       x:Name="PartImage" 
+                       Height="300" 
+                       Width="500"
+                       Source="http://ecx.images-amazon.com/images/I/51kDgQgexzL.jpg"/>
+                 </TextBlock>
+        <StackPanel Orientation="Horizontal">
+                <Separator 
+                       Width="180" 
+                       Visibility="Hidden"/>
+                <Button x:Name="BackPart" 
+                        Content="Backward" 
+                        Height="64" 
+                        Width="80"
+                        Visibility="Hidden"
                         Click="BackPart_Click"/>
-                <Separator Width="100" Visibility="Hidden" />
-                <Button Content="Forward"  x:Name="ForwardPart" Height="64" Width="80" 
-                        Click="ForwardPart_Click" />
+                <Separator 
+                    Width="100" 
+                    Visibility="Hidden"/>
+                <TextBlock>
+                    <Hyperlink Click="Hyperlink_Click_1" NavigateUri="google.com" RequestNavigate="Hyperlink_RequestNavigate">
+                 <Button 
+                      x:Name="InfBtn"
+                      Content="Info"
+                       Height="64" 
+                       Width="80" 
+                      Click="InfBtn_Click"/>
+                     </Hyperlink>
+                </TextBlock>
+                <Separator 
+                    Width="100" 
+                    Visibility="Hidden"/>
+                <Button 
+                    x:Name="ForwardPart"
+                    Content="Forward"
+                    Height="64" 
+                    Width="80" 
+                    Click="ForwardPart_Click" />
 
 
             </StackPanel>
-            <TextBox HorizontalAlignment="Right" VerticalAlignment="Bottom" FontSize="8" FontWeight="Light"  />
         </StackPanel>
     </Grid>
 </Window>
-
